@@ -7,18 +7,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-
-  title = 'pipes-reactive';
-  presentDate = new Date();
-  //today0: Observable<Date>;
-  todayO$ = new Observable<Date>((observer) => {
-    setInterval(() => {
-      observer.next(new Date());
-    }, 1000);
-  });
-  price: number = 2000;
-  Fruits = ['Apple', 'Orange', 'Grapes', 'Mango', 'Kiwi', 'Pomegranate'];
-  decimalNum1: number = 8.7589623;
-  decimalNum2: number = 5.43;
+  title = 'pipes reactive';
+  euro: number = 58.06;
+  cad: number = 40.27;
+  usd: number = 54.92;
 }

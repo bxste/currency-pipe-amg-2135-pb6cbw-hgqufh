@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Date Pipe</title>
+    <title>Currency Pipe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <h1></h1>
     <div>
-      <h1>
-        <p class="text">ANGULAR DATA PIPE</p>
-        <br />
-        {{ presentDate | date: 'longDate' }} &nbsp;&nbsp;|&nbsp;&nbsp;
-        {{ presentDate | date: 'M/dd/yyyy' }}
-
-        <br />
-        {{ presentDate | date: 'EEEE' }}
-        <br />
-        {{ todayO$ | async | date: 'mediumTime' }} {{ presentDate | date: 'z' }}
-      </h1>
+      <h1 class="title">Currency Pipe</h1>
+      <div class="card">
+        <div class="p">
+          <h1>Euro €</h1>
+          The Equivalent of 1 EURO to PHP is : {{ euro | currency: 'PHP' }}
+        </div>
+      </div>
+      <div class="card">
+        <div class="p">
+          <h1>Canadian Dollar $</h1>
+          The Equivalent of 1 CAD to PHP is : {{ cad | currency: 'PHP' }}
+        </div>
+      </div>
+      <div class="card">
+        <div class="p">
+          <h1>US Dollar $</h1>
+          The Equivalent of 1 USD to PHP is : {{ usd | currency: 'PHP' }}
+        </div>
+      </div>
     </div>
   </body>
 </html>
